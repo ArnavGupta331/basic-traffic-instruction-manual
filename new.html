@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Car Safety Awareness & Education</title>
+</head>
+<link rel="stylesheet" href="c.css">
+<body>
+  <header role="banner">
+    <nav class="container" aria-label="Primary navigation">
+      <div class="logo" tabindex="0">CarSafe Education</div>
+      <div class="nav-links" role="list">
+        <a href="#traditional" class="nav-link" role="listitem">Traditional Safety</a>
+        <a href="#modern" class="nav-link" role="listitem">Modern Safety</a>
+        <a href="#about" class="nav-link" role="listitem">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" role="region" aria-label="Hero section introducing car safety awareness">
+      <h1>Stay Safe on the Road</h1>
+      <p>Learn how car safety features protect you from accidents and make driving safer. Interact with simulations to understand their impact.</p>
+      <button class="btn-primary" id="start-btn" aria-describedby="start-desc">Explore Features</button>
+      <p id="start-desc" class="visually-hidden">Click this button to scroll to the car safety features section.</p>
+    </section>
+
+    <section id="traditional" role="region" aria-labelledby="traditional-heading">
+      <h2 id="traditional-heading">Traditional Safety Features</h2>
+      <p class="lead">Essential car safety technologies that have saved lives for decades.</p>
+      <div class="features-grid">
+        <article class="card" tabindex="0" aria-labelledby="seatbelt-title" aria-describedby="seatbelt-desc">
+          <svg aria-hidden="true" viewBox="0 0 64 64" >
+            <path d="M32 2 L14 30 L24 40 L42 12 Z" stroke-linejoin="round"/>
+          </svg>
+          <h3 id="seatbelt-title">Seatbelts</h3>
+          <p id="seatbelt-desc">Help keep passengers securely in place during collisions, reducing injury risks.</p>
+          <div class="simulation" aria-live="polite" aria-atomic="true" aria-label="Seatbelt simulation"></div>
+          <div class="interaction">
+            <button type="button" role="switch" aria-checked="false" class="btn-toggle" data-feature="seatbelt" aria-describedby="seatbelt-toggle-desc">
+              Fasten Seatbelt
+            </button>
+          </div>
+          <p id="seatbelt-toggle-desc" class="visually-hidden">Toggle to fasten or unfasten the seatbelt simulation.</p>
+        </article>
+
+        <article class="card" tabindex="0" aria-labelledby="airbag-title" aria-describedby="airbag-desc">
+          <svg aria-hidden="true" viewBox="0 0 64 64" >
+            <circle cx="32" cy="32" r="14" stroke-linejoin="round"/>
+            <path d="M32 18 L40 36 L24 36 Z" stroke-linejoin="round"/>
+          </svg>
+          <h3 id="airbag-title">Airbags</h3>
+          <p id="airbag-desc">Deploy quickly in a crash to cushion impact and protect passengers from serious injuries.</p>
+          <div class="simulation" aria-live="polite" aria-atomic="true" aria-label="Airbag simulation">
+            <div class="airbag" role="img" aria-hidden="true"></div>
+            <svg class="car-graphic" viewBox="0 0 64 32" aria-hidden="true" focusable="false" >
+              <rect x="10" y="12" width="44" height="12" rx="3" ry="3"/>
+              <circle cx="18" cy="28" r="6"/>
+              <circle cx="46" cy="28" r="6"/>
+            </svg>
+          </div>
+          <div class="interaction">
+            <button type="button" role="switch" aria-checked="false" class="btn-toggle" data-feature="airbag" aria-describedby="airbag-toggle-desc">
+              Deploy Airbag
+            </button>
+          </div>
+          <p id="airbag-toggle-desc" class="visually-hidden">Toggle to deploy or reset the airbag simulation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="modern" role="region" aria-labelledby="modern-heading">
+      <h2 id="modern-heading">Modern Safety Features</h2>
+      <p class="lead">Advanced technologies enhancing driving safety with smart assistance and controls.</p>
+      <div class="features-grid">
+        <article class="card" tabindex="0" aria-labelledby="abs-title" aria-describedby="abs-desc">
+          <svg aria-hidden="true" viewBox="0 0 64 64" >
+            <circle cx="18" cy="46" r="10"/>
+            <circle cx="46" cy="46" r="10"/>
+          </svg>
+          <h3 id="abs-title">Anti-lock Braking System (ABS)</h3>
+          <p id="abs-desc">Prevents wheels from locking, helping maintain steering control during hard braking.</p>
+          <div class="simulation" label="ABS simulation">
+            <svg class="car-graphic" viewBox="0 0 64 32" aria-hidden="true" focusable="false" >
+              <rect x="10" y="12" width="44" height="12" rx="3" ry="3"/>
+            </svg>
+            <div class="wheel left" aria-hidden="true"></div>
+            <div class="wheel right" aria-hidden="true"></div>
+          </div>
+          <div class="interaction">
+            <button type="button" role="switch" aria-checked="false" class="btn-toggle" data-feature="abs" aria-describedby="abs-toggle-desc">
+              Activate ABS
+            </button>
+          </div>
+          <p id="abs-toggle-desc" class="visually-hidden">Toggle to activate or deactivate the ABS simulation with pulsing wheels.</p>
+        </article>
+
+        <article class="card" tabindex="0" aria-labelledby="lane-title" aria-describedby="lane-desc">
+          <svg aria-hidden="true" viewBox="0 0 64 64" >
+            <rect x="6" y="10" width="6" height="44" rx="1"/>
+            <rect x="52" y="10" width="6" height="44" rx="1"/>
+          </svg>
+          <h3 id="lane-title">Lane Assist</h3>
+          <p id="lane-desc">Warns or assists drivers to stay in their lane, preventing accidental lane departures.</p>
+          <div class="simulation" aria-live="polite" aria-atomic="true" aria-label="Lane assist simulation">
+            <svg class="car-graphic" viewBox="0 0 64 32" aria-hidden="true" focusable="false" >
+              <rect x="10" y="12" width="44" height="12" rx="3" ry="3" fill="#3b82f6"/>
+            </svg>
+            <div class="lane-line left" aria-hidden="true"></div>
+            <div class="lane-line right" aria-hidden="true"></div>
+          </div>
+          <div class="interaction">
+            <button type="button" role="switch" aria-checked="false" class="btn-toggle" data-feature="lane" aria-describedby="lane-toggle-desc">
+              Toggle Lane Assist
+            </button>
+          </div>
+          <p id="lane-toggle-desc" class="visually-hidden">Toggle to activate or deactivate lane assist simulation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" role="region" aria-labelledby="about-heading">
+      <h2 id="about-heading">About This Project</h2>
+      <p class="lead">
+        This application educates users on essential and modern car safety mechanisms, demonstrating how they protect occupants during accidents.
+        The interactive simulations make complex safety technologies easy to understand and highlight the importance of driving safely every day.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2024 CarSafe Education — Created to spread awareness about road safety.
+  </footer>
+</body>
+</html>
+
